@@ -2,19 +2,60 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial scale=1">
     <title>Thumbs Panel</title>
+    <style media="screen">
+      div {
+        border: 1px solid #62e37b;
+        background-color: #dbc7ff;
+        margin: 2px;
+        padding: 5px;
+      }
+      #content {
+        border: 4px solid black;
+        margin: auto;
+        width: 70%;
+        background-color: #54aaff;
+        }
+      #headerBox {
+        background-color: ##bffbff;
+        border: 3px double black;
+      }
+      .linksBox {
+        border: 4px double #000000;
+        background-color: #85f7ff
+      }
+
+        @media (max-width: 600px) {
+          #content {
+            width: 100%;
+          }
+          body {
+            background-color: gray;
+          }
+        }
+    </style>
   </head>
   <body>
-  <h1>Thumbs Panel</h1>
-  <p>This is a panel to control the Formbar.</p>
-  <p><a href="http://172.21.3.4:5000/tutd?thumb=up">Thumbs Up</a></p>
-  <p><a href="http://172.21.3.4:5000/tutd?thumb=wiggle">Thumbs Wiggle</a></p>
-  <p><a href="http://172.21.3.4:5000/tutd?thumb=down">Thumbs Down</a></p>
-  <p><a href="http://172.21.3.4:5000/perc?amount=5">perc</a></p>
-  <p><a href="http://172.21.3.4:5000/color?hex=fc03f0">color</a></p>
-  <p><a href="http://172.21.3.4:5000/say?phrase=E">say</a></p>
-  <p><a href="http://172.21.3.4:5000/bgm?file=rickroll&volume=<o.2>">bgm 1</a></p>
-  <p><a href="http://172.21.3.4:5000/bgm?file=kahootslobby1&volume=<o.2>">bgm 2</a></p>
-  <p><a href="http://172.21.3.4:5000/bgm?file=attack_on_titan&volume=<o.2>">bgm 3</a></p>
+    <div id="content">
+      <div id="headerBox">
+        <h1>Thumbs Panel</h1>
+      </div>
+      <div class="linksBox">
+        <p>This is a panel to control the Formbar.</p>
+        <p><a href="http://172.21.3.4:5000/tutd?thumb=up">Thumbs Up</a></p>
+        <p><a href="http://172.21.3.4:5000/tutd?thumb=wiggle">Thumbs Wiggle</a></p>
+        <p><a href="http://172.21.3.4:5000/tutd?thumb=down">Thumbs Down</a></p>
+      </div>
+      <div class="linksBox">
+		<p><a href="game.html">my game</a></p>
+        <p><a href="http://172.21.3.4:5000/perc?amount=5">perc</a></p>
+        <p><a href="http://172.21.3.4:5000/color?hex=fc03f0">color</a></p>
+        <p><a href="http://172.21.3.4:5000/say?phrase=E">say</a></p>
+        <p><a href="http://172.21.3.4:5000/bgm?file=rickroll&volume=<o.2>">bgm 1</a></p>
+        <p><a href="http://172.21.3.4:5000/bgm?file=kahootslobby1&volume=<o.2>">bgm 2</a></p>
+        <p><a href="http://172.21.3.4:5000/bgm?file=attack_on_titan&volume=<o.2>">bgm 3</a></p>
+      </div>
+    </div>
   </body>
 </html>
