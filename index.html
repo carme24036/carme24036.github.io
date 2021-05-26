@@ -1,29 +1,54 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <meta name="viewport" content="user-scalable=no">
-        <link rel="icon" href="icon/icon.png" type="image/png">
-        <link rel="apple-touch-icon" href="icon/icon.png">
-        <link rel="stylesheet" type="text/css" href="fonts/gamefont.css">
-        <title>get to school 2</title>
-    </head>
-    <body style="background-color: black">
-        <script type="text/javascript" src="js/libs/pixi.js"></script>
-        <script type="text/javascript" src="js/libs/pixi-tilemap.js"></script>
-        <script type="text/javascript" src="js/libs/pixi-picture.js"></script>
-        <script type="text/javascript" src="js/libs/fpsmeter.js"></script>
-        <script type="text/javascript" src="js/libs/lz-string.js"></script>
-        <script type="text/javascript" src="js/libs/iphone-inline-video.browser.js"></script>
-        <script type="text/javascript" src="js/rpg_core.js"></script>
-        <script type="text/javascript" src="js/rpg_managers.js"></script>
-        <script type="text/javascript" src="js/rpg_objects.js"></script>
-        <script type="text/javascript" src="js/rpg_scenes.js"></script>
-        <script type="text/javascript" src="js/rpg_sprites.js"></script>
-        <script type="text/javascript" src="js/rpg_windows.js"></script>
-        <script type="text/javascript" src="js/plugins.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
-    </body>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial scale=1">
+  <title>Thumbs Panel</title>
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <div id="content">
+    <div id="headerBox">
+      <h1>Thumbs Panel</h1>
+      <p id="phrasePara"></p>
+    </div>
+    <div class="linksBox">
+      <p>This is a panel to control the Formbar.</p>
+      <p><a href="http://172.21.3.4:5000/tutd?thumb=up">Thumbs Up</a></p>
+      <p><a href="http://172.21.3.4:5000/tutd?thumb=wiggle">Thumbs Wiggle</a></p>
+      <p><a href="http://172.21.3.4:5000/tutd?thumb=down">Thumbs Down</a></p>
+      <p><a href="http://172.21.3.4:5000/tutd?thumb=oops">Oops</a></p>
+    </div>
+    <div class="textBox">
+      <img class="f-left" src="img/spiderMeme.jpg" alt="A meme about spiders" />
+      <p>This is a meme about finding a spider, going to get your shoe to kill it, and it's gone when you come back and try to catch it, so you wonder where it could've gone. </p>
+      <img class="f-right" src="img/memequarantine.jfif" alt="A meme about quarantine in 2020-2021" />
+      <p>We all related to this at some point, did we?</p>
+      <img class="f-left" src="img/food.jfif" alt="food" />
+      <p>Hungry? Look at this food.... SHEEEESH</p>
+    </div>
+    <div class="linksBox">
+      <p><a href="http://172.21.3.4:5000/perc?amount=5">perc</a></p>
+      <p><a href="http://172.21.3.4:5000/color?hex=fc03f0">color</a></p>
+      <p><a href="http://172.21.3.4:5000/say?phrase=E">say</a></p>
+      <p><a href="http://172.21.3.4:5000/bgm?file=rickroll&volume=<o.2>">bgm 1</a></p>
+      <p><a href="http://172.21.3.4:5000/bgm?file=kahootslobby1&volume=<o.2>">bgm 2</a></p>
+      <p><a href="http://172.21.3.4:5000/bgm?file=attack_on_titan&volume=<o.2>">bgm 3</a></p>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var phraseList = ['Sword', 'Pickaxe', 'Shovel', 'Cure for Cancer', 'Hola Soy Dora', 'no', 'e', 'random minecraft block']
+    var random = Math.random() * 6
+    random = Math.floor(random)
+    var phrasePara = document.getElementById('phrasePara')
+    phrasePara.innerHTML = phraseList[random]
+    for (phrase in phraseList){
+      phrasePara.innerHTML += phraseList[phrase]
+    }
+  </script>
+</body>
+
 </html>
