@@ -1,0 +1,60 @@
+div {
+  border: 1px solid #black;
+  background-color: #dbc7ff;
+  margin: 2px;
+  padding: 5px;
+}
+
+#content {
+  border: 2px solid black;
+  margin: auto;
+  width: 65%;
+  background-color: #54aaff;
+}
+
+#headerBox {
+  background-color: ##bffbff;
+  border: 3px double black;
+}
+
+.linksBox {
+  border: 4px double #000000;
+  background-color: #85f7ff
+}
+
+/* Combine Selectors */
+.linksBox,
+.textBox {
+  border: radius 25px
+}
+
+/* Selector for only images inside of textBoxes */
+.textBox img {
+  width: 40%;
+  clear: both;
+}
+
+/* Selector for all textBoxes */
+.textBox {
+  border: 2px dashed blue;
+  overflow: auto;
+  background-color: #fccfff
+}
+
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
+}
+
+@media (max-width: 600px) {
+  #content {
+    width: 100%;
+  }
+
+  body {
+    background-color: white;
+  }
+}
