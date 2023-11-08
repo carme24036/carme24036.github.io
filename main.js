@@ -1,6 +1,8 @@
 import * as THREE from './three.module.js';
 
-// import './style.css'
+import './style.css'
+
+// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 const scene = new THREE.Scene();
 
@@ -20,7 +22,7 @@ renderer.setSize( window.innerWidth, window.innerHeight );
 camera.position.z = 400
 camera.position.x = 0
 
-const geoPog = new THREE.SphereGeometry(2, 50, 50, 100)
+const geoPog = new THREE.SphereGeometry(7, 50, 50, 100)
 
 // Making Shape
 const texturePog = new THREE.TextureLoader().load('earth.png')
@@ -53,6 +55,9 @@ pog.rotation.x = 0
 
 scene.add(pog);
 
+// CONTROL ORBIT
+// const controls = new OrbitControls(camera, renderer.domElement);
+
 // STARS
 function addStar() {
   const geometry = new THREE.SphereGeometry(0.25, 15, 20);
@@ -81,8 +86,8 @@ const moon = new THREE.Mesh(
 
 scene.add(moon)
 
-moon.position.z = 10;
-moon.position.setX(-4);
+moon.position.z = 20;
+moon.position.setX(-6);
 
 // SCROLL ANIMATION
 function moveCamera() {
@@ -93,7 +98,7 @@ function moveCamera() {
   moon.rotation.z += 0.05;
 
   camera.position.z = t * -0.01;
-  camera.position.z = t * -0.01;
+  camera.position.z = t * -0.015;
   camera.rotation.y = t * -0.0002;
 
 }
@@ -106,6 +111,8 @@ function animate (time) {
   // pog.rotation.x += 0.02;
   pog.rotation.y += 0.005;
   // pog.rotation.z += 0.03;
+
+  // controls.update()
 
   renderer.render( scene, camera );
 };
