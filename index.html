@@ -1,55 +1,91 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial scale=1">
-  <title>Thumbs Panel</title>
-  <link rel="stylesheet" href="css/style.css">
+    <canvas id="bg"></canvas>
 
-</head>
+    <script type="module" src="/main.js"></script>
 
-<body>
-  <div id="content">
-    <div id="headerBox">
-      <h1>Thumbs Panel</h1>
-      <p id="phrasePara"></p>
-    </div>
-    <div class="linksBox">
-      <p>This is a panel to control the Formbar.</p>
-      <p><a href="http://172.21.3.4:5000/tutd?thumb=up">Thumbs Up</a></p>
-      <p><a href="http://172.21.3.4:5000/tutd?thumb=wiggle">Thumbs Wiggle</a></p>
-      <p><a href="http://172.21.3.4:5000/tutd?thumb=down">Thumbs Down</a></p>
-      <p><a href="http://172.21.3.4:5000/tutd?thumb=oops">Oops</a></p>
-    </div>
-    <div class="textBox">
-      <img class="f-left" src="img/spiderMeme.jpg" alt="A meme about spiders" />
-      <p>This is a meme about finding a spider, going to get your shoe to kill it, and it's gone when you come back and try to catch it, so you wonder where it could've gone. </p>
-      <img class="f-right" src="img/memequarantine.jfif" alt="A meme about quarantine in 2020-2021" />
-      <p>We all related to this at some point, did we?</p>
-      <img class="f-left" src="img/food.jfif" alt="food" />
-      <p>Hungry? Look at this food.... SHEEEESH</p>
-    </div>
-    <div class="linksBox">
-      <p><a href="game1.html">game</a></p>
-      <p><a href="http://172.21.3.4:5000/perc?amount=5">perc</a></p>
-      <p><a href="http://172.21.3.4:5000/color?hex=fc03f0">color</a></p>
-      <p><a href="http://172.21.3.4:5000/say?phrase=E">say</a></p>
-      <p><a href="http://172.21.3.4:5000/bgm?file=rickroll&volume=0.2">bgm 1</a></p>
-      <p><a href="http://172.21.3.4:5000/bgm?file=kahootslobby1&volume=0.2">bgm 2</a></p>
-      <p><a href="http://172.21.3.4:5000/bgm?file=attack_on_titan&volume=0.2">bgm 3</a></p>
-    </div>
-  </div>
-  <script type="text/javascript">
-    var phraseList = ['Sword', 'Pickaxe', 'Shovel', 'Cure for Cancer', 'Hola Soy Dora', 'no', 'e', 'random minecraft block']
-    var random = Math.random() * 6
-    random = Math.floor(random)
-    var phrasePara = document.getElementById('phrasePara')
-    phrasePara.innerHTML = phraseList[random]
-    for (phrase in phraseList){
-      phrasePara.innerHTML += phraseList[phrase]
-    }
-  </script>
-</body>
+    <main>
+      <header>
+        <h1>Carmen Cedano</h1>
+        <p>Welcome to my website!</p>
+      </header>
 
+
+      <blockquote>
+        <p>- I like food</p>
+      </blockquote>
+
+      <section>
+        <h2>📜 Manifesto</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+      </section>
+
+      <section class="light">
+        <h2>👩🏽‍🚀 Projects</h2>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+        <h2>🏆 Accomplishments</h2>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+      </section>
+
+      <blockquote>
+        <p>I'm js tryna eat fr<br><br>-Me, 2023</p>
+      </blockquote>
+
+      <section class="left">
+        <h2>🌮 Work History</h2>
+
+        <h3>McDonalds</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <h3>Burger King</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <h3>Taco Bell</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <h3>The Bottom Line</h3>
+        <p>
+          There's a reason I only work at food places (free food)
+        </p>
+
+      </section>
+
+      <blockquote>
+        <p>Thanks for reading!</p>
+      </blockquote>
+
+
+    </main>
+    
+  </body>
 </html>
