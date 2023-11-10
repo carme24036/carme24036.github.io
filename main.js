@@ -2,8 +2,6 @@ import * as THREE from './three.module.js';
 
 // import './style.css'
 
-// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(
@@ -54,9 +52,6 @@ const pog = new THREE.Mesh( geoPog, matPog );
 pog.rotation.x = 0
 
 scene.add(pog);
-
-// CONTROL ORBIT
-// const controls = new OrbitControls(camera, renderer.domElement);
 
 // STARS
 function addStar() {
@@ -111,8 +106,6 @@ function animate (time) {
   // pog.rotation.x += 0.02;
   pog.rotation.y += 0.005;
   // pog.rotation.z += 0.03;
-
-  // controls.update()
 
   renderer.render( scene, camera );
 };
