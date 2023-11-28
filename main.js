@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 
 // starting position of the images from the top
-const STARTY = 0;
+const STARTY = -3;
 
 // Create a new scene
 const scene = new THREE.Scene();
@@ -11,10 +11,13 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 camera.position.z = 30;
 camera.position.y = STARTY;
 
-// Create list og images in the 'img' folder
+const bgTexture = new THREE.TextureLoader().load('/img/bg.png');
+scene.background = bgTexture;
+
+// Create list of images in the 'img' folder
 let imgList = [
      'cert.png',
-     'cert.png',
+     'honor.png',
      'cert.png',
      'cert.png',
 ];
@@ -23,12 +26,12 @@ let imgList = [
 for (const image in imgList) {
 // every mesh has a geometry, texture, and material
      const texture = new THREE.TextureLoader().load('img/' + imgList[image])
-     const geometry = new THREE.PlaneGeometry(30, 20);
+     const geometry = new THREE.PlaneGeometry(24, 18);
      const material = new THREE.MeshBasicMaterial(
           {
-               color: 0x878787,
+               color: 0xffffff,
                side: THREE.DoubleSide,
-               map: texture // add the texture image here
+               map: texture, // add the texture image here
           }
      );
      const plane = new THREE.Mesh(geometry, material);
@@ -68,10 +71,10 @@ function resizeWindow() {
           };
      }
      else { 
-          camera.position.x = 18;
+          camera.position.x = 25;
           for (const child in scene.children) {
-               scene.children[child].rotation.y = 15 * (Math.PI / 180);
-               scene.children[child].position.y = child * -30
+               scene.children[child].rotation.y = 16 * (Math.PI / 180);
+               scene.children[child].position.y = child * -24
           };
      };
 };

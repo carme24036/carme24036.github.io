@@ -6,22 +6,27 @@ canvas {
 }
 
 body {
-     font-size: 24px;
-     color: white;
+     font-size: 22px;
+     color: 
+     #88279c;
+
 }
 
 #content {
      float: right;
-     width: 60%
+     width: 60%;
+     font-family: 'Courier New', Courier, monospace, monospace;
+     font-weight: bold;
 }
 
 .box {
-     background-color: rgba(255, 255, 255, 0.5);
+     background-color: rgba(145, 115, 189, 0.2);
      border-radius: 3px;
+     border: solid 2px;
 }
 
 h1 {
-     color: #FFFFFF;
+     color: #5b136b;
 }
 
 @media screen and (max-width: 600px) {
