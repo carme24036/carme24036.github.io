@@ -9,7 +9,6 @@ body {
      font-size: 22px;
      color: 
      #88279c;
-
 }
 
 #content {
@@ -21,7 +20,7 @@ body {
 
 .box {
      background-color: rgba(145, 115, 189, 0.2);
-     border-radius: 3px;
+     border-radius: 8px;
      border: solid 2px;
 }
 
