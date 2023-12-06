@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 
 // starting position of the images from the top
-const STARTY = -3;
+const STARTY = -5;
 
 // Create a new scene
 const scene = new THREE.Scene();
@@ -17,9 +17,9 @@ scene.background = bgTexture;
 // Create list of images in the 'img' folder
 let imgList = [
      'cert.png',
+     'osha.png',
+     'newHonor.png',
      'honor.png',
-     'cert.png',
-     'cert.png',
 ];
 
 // add every listed image as a plane mesh with texture to scene
@@ -42,7 +42,7 @@ for (const image in imgList) {
 // Move the camera with the scroll bar
 function moveCamera() {
      const top = document.body.getBoundingClientRect().top;
-     camera.position.y = STARTY + top * 0.05;
+     camera.position.y = STARTY + top * 0.06;
      console.log(top);
 };
 
