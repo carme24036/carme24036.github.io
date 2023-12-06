@@ -18,15 +18,17 @@ scene.background = bgTexture;
 let imgList = [
      'cert.png',
      'osha.png',
-     'newHonor.png',
      'honor.png',
+     'honor1.png',
+     'honor2.png',
+     'attendance.png',
 ];
 
 // add every listed image as a plane mesh with texture to scene
 for (const image in imgList) {
 // every mesh has a geometry, texture, and material
      const texture = new THREE.TextureLoader().load('img/' + imgList[image])
-     const geometry = new THREE.PlaneGeometry(24, 18);
+     const geometry = new THREE.PlaneGeometry(20, 16);
      const material = new THREE.MeshBasicMaterial(
           {
                color: 0xffffff,
@@ -42,7 +44,7 @@ for (const image in imgList) {
 // Move the camera with the scroll bar
 function moveCamera() {
      const top = document.body.getBoundingClientRect().top;
-     camera.position.y = STARTY + top * 0.06;
+     camera.position.y = STARTY + top * 0.07;
      console.log(top);
 };
 
@@ -67,7 +69,7 @@ function resizeWindow() {
           camera.position.x = 0
           for (const child in scene.children) {
                scene.children[child].rotation.y = 0;
-               scene.children[child].position.y = child * -50
+               scene.children[child].position.y = child * -40
           };
      }
      else { 
