@@ -1,0 +1,129 @@
+.title {
+     color: rgb(177, 177, 177);
+     list-style-type: none;
+     height: 42px;
+     width: 450px;
+     margin: auto;
+     padding: 15px;
+     overflow: hidden;
+     background-color: rgb(72, 76, 87);
+     text-align: center;
+     font-family: Verdana;
+     font-weight: bold;
+     font-size: 30px;
+     border: 3px solid rgb(54, 54, 54);
+}
+
+.body {
+     /* background-color: rgb(226, 226, 226); */
+     background-image: linear-gradient(rgb(206, 206, 206), rgb(100, 112, 128));
+     background-attachment: fixed;
+}
+
+.gameRules {
+     color: rgb(61, 61, 61);
+     font-family: Verdana;
+     font-size: 18px;
+}
+
+.gameRuleButton {
+     background-color: rgb(65, 65, 65);
+     color: white;
+     padding: 15px;
+     float: center;
+     margin: 8px;
+     border: 3px solid black;
+     border-radius: 8px;
+     cursor: pointer;
+     opacity: 0.8px;
+     font-size: 15px;
+     font-family: Verdana;
+}
+
+.game {
+     /* background-color: rgb(169, 178, 184); */
+     background-image: linear-gradient(rgb(154, 159, 172), rgb(104, 116, 128));
+     display: inline-block;
+     margin: 8px;
+     border: 2px solid rgb(71, 71, 71);
+     padding: 5px;
+     height: 290px;
+     border-radius: 15px;
+}
+
+.pointsClass {
+     padding: 8px;
+     margin: 14px;
+}
+
+.seePoints {
+     background-color: rgb(65, 65, 65);
+     color: white;
+     color: white;
+     padding: 12px;
+     float: center;
+     margin: 5px;
+     border: 3px solid black;
+     border-radius: 8px;
+     cursor: pointer;
+     font-family: Verdana;
+     opacity: 0.8;
+     transition: 0.3s;
+}
+
+.seePoints:hover {
+     opacity: 2
+}
+
+
+.allLevels {
+     display: inline-block;
+     padding: 8px;
+}
+
+.levels {
+     display: inline-block;
+     padding: 10px;
+     margin: 5px
+}
+
+.buttons {
+     margin: 2px;
+     border: 4px;
+}
+
+.retry {
+     background-color: rgb(65, 65, 65);
+     color: white;
+     padding: 14px;
+     float: left;
+     margin: 2px;
+     border: 3px solid black;
+     border-radius: 8px;
+     cursor: pointer;
+     font-family: Verdana;
+     opacity: 0.8;
+     transition: 0.3s;
+}
+
+.retry:hover {
+     opacity: 2
+}
+
+.miniGame {
+     background-color: rgb(95, 99, 102);
+     color: white;
+     padding: 12px;
+     float: center;
+     margin: 5px;
+     border: 3px solid rgb(56, 56, 56);
+     border-radius: 8px;
+     font-family: Verdana;
+     /* cursor: pointer; */
+     /* opacity: 0.85; */
+     transition: 0.3s;
+}
+
+.miniGame:hover {
+     opacity: 2
+}

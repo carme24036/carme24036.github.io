@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 
 // starting position of the images from the top
-const STARTY = -5;
+const STARTY = -7;
 
 // Create a new scene
 const scene = new THREE.Scene();
@@ -23,13 +23,14 @@ let imgList = [
      'honor2.png',
      'attendance.png',
      'game.png',
+     // 'robodog.png',
 ];
 
 // add every listed image as a plane mesh with texture to scene
 for (const image in imgList) {
 // every mesh has a geometry, texture, and material
      const texture = new THREE.TextureLoader().load('img/' + imgList[image])
-     const geometry = new THREE.PlaneGeometry(20, 16);
+     const geometry = new THREE.PlaneGeometry(22, 17);
      const material = new THREE.MeshBasicMaterial(
           {
                color: 0xc7c7c7,
@@ -78,7 +79,7 @@ function resizeWindow() {
           camera.position.x = 25;
           for (const child in scene.children) {
                scene.children[child].rotation.y = 25 * (Math.PI / 180);
-               scene.children[child].position.y = child * -26
+               scene.children[child].position.y = child * -27
           };
      };
 };

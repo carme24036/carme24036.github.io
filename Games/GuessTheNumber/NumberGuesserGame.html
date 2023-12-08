@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+    <link rel="stylesheet" href="style.css">
+
+    <div class="title">Guess the number</div>
+
+</head>
+
+<body class="body">
+
+  <script>
+
+    // onload="gameRuless()"
+
+    let points = 0;
+
+    function gameRuless() {
+        alert("This is a game where you have to guess a number within a certain range that progressively gets higher with each level. To play, click the Level 1 button.")
+        alert("To keep playing the same level, just press enter on the keyboard when you guess the number.")
+        alert("You get a certain amount of points in each level, depending on its difficilty.")
+        alert("The more points you have, the more levels you can play. You can also gain points from playing the minigame. (Still in progress)")
+    }
+    
+    function reload() {
+        location.reload()
+    }
+
+    function seePoints() {
+        alert('You have ' + points + ' points.') 
+    }
+
+    function minigame() {
+        alert("Mini-game is still in progress")
+        return;
+
+    }
+
+
+    function guessLvl1(guess) {
+        let randNum = Math.floor(Math.random() * 10) + 1;
+
+        let userGuess = prompt("Guess a number between 1 and 10:");
+
+        while (userGuess != randNum) {
+            if (userGuess < randNum) {
+                alert("Number is too low, try again");
+            } else if (userGuess > randNum) {
+                alert("Number is too high, try again")
+            } else {
+              break  
+            }   
+            userGuess = prompt("Guess a number between 1 and 10:");
+        } 
+
+        if (userGuess == randNum) {
+            alert("Correct! The number was " + randNum + " \n +2 Points");
+            points += 2;
+        }
+
+        if (guess == null) {
+            return
+        }
+    } 
+
+    function guessLvl2(guess) {
+        if (points < 5) {
+            alert("You need at least 5 points to play level 2")
+            return;
+        }
+        let randNum = Math.floor(Math.random() * 20) + 1;
+
+        let userGuess = prompt("Guess a number between 1 and 20:");
+
+        while (userGuess != randNum && points >= 5) {
+            if (userGuess < randNum) {
+                alert("Number is too low, try again");
+            } else if (userGuess > randNum) {
+                alert("Number is too high, try again")
+            } else {
+              break  
+            }   
+            userGuess = prompt("Guess a number between 1 and 20:");
+        } 
+
+        if (userGuess == randNum) {
+            alert("Correct! The number was " + randNum + " \n +4 Points");
+            points += 4;
+        }
+    }
+
+    function guessLvl3(guess) {
+        if (points < 15) {
+            alert("You need at least 15 points to play level 3")
+            return;
+        }
+        let randNum = Math.floor(Math.random() * 30) + 1;
+
+        let userGuess = prompt("Guess a number between 1 and 30:");
+
+        while (userGuess != randNum && points >= 15) {
+            if (userGuess < randNum) {
+                alert("Number is too low, try again");
+            } else if (userGuess > randNum) {
+                alert("Number is too high, try again")
+            } else {
+              break  
+            }   
+            userGuess = prompt("Guess a number between 1 and 30:");
+        } 
+
+        if (userGuess == randNum) {
+            alert("Correct! The number was " + randNum + " \n +6 Points");
+            points += 6;
+        }
+    }
+
+    function guessLvl4(guess) {
+        if (points < 25) {
+            alert("You need at least 30 points to play level 4")
+            return;
+        }
+        let randNum = Math.floor(Math.random() * 30) + 1;
+
+        let userGuess = prompt("Guess a number between 1 and 40:");
+
+        while (userGuess != randNum && points >= 30) {
+            if (userGuess < randNum) {
+                alert("Number is too low, try again");
+            } else if (userGuess > randNum) {
+                alert("Number is too high, try again")
+            } else {
+              break  
+            }   
+            userGuess = prompt("Guess a number between 1 and 40:");
+        } 
+
+        if (userGuess == randNum) {
+            alert("Correct! The number was " + randNum + " \n +8 Points");
+            points += 8;
+        }
+    }
+    
+  </script>
+
+    <h3 class="gameRules">
+        <button class="gameRuleButton" onclick="gameRuless()">Read game rules</button>
+        <br>
+        <br>
+        This is a game where you have to guess a number within a certain range that progressively gets higher with each level. To play, click the first button below. 
+        <br>
+        To keep playing the same level, just press enter on the keyboard when you guess the number.
+        <br> 
+        <br>
+        You get a certain amount of points in each level, depending on its difficilty.
+        <br>
+        The more points you have, the more levels you can play. You can also gain points from playing the minigame. (Still in progress)
+    </h3> 
+
+    <h4 class="gameRules">
+        Also, for now, you can't exit the "game" until you guess the right number.
+    </h4>
+   
+
+    <div class="game">
+
+        <div id="levels" class="allLevels">
+
+            <div id="level1" class="levels">
+                <div id="level1Button" class="Buttons">
+                    <button id="PlayLevel1" class="retry" onclick="guessLvl1()">Play Level 1</button>
+                </div>
+            </div>    
+
+            <div id="level2" class="levels">
+                <div id="level2Button" class="Buttons">
+                    <button id="PlayLevel2" class="retry" onclick="guessLvl2()">Play Level 2</button>
+                </div>
+            </div>
+
+            <div id="level3" class="levels">
+                <div id="level3Button" class="Buttons">
+                    <button id="PlayLevel3" class="retry" onclick="guessLvl3()">Play Level 3</button>
+                </div>
+            </div>
+
+            <div id="level4" class="levels">
+                <div id="level4Button" class="Buttons">
+                    <button id="PlayLevel4" class="retry" onclick="guessLvl4()">Play Level 4</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="displayPoints" class="pointsClass">
+            <button id="pointsButton" class="seePoints" onclick="seePoints()">See Points</button>
+        </div>
+
+        <div id="minigame" class="pointsClass">
+            <button id="minigameButton" class="miniGame" onclick="minigame()">Play Mini-Game</button>
+        </div>
+
+    </div>
+
+    <h4 class="gameRules">
+        (This game is still a work in progress, this is just all that's been done at this time)
+    </h4>
+
+</body>
+</html>
