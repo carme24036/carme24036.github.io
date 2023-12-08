@@ -6,9 +6,8 @@ canvas {
 }
 
 body {
-     font-size: 22px;
-     color: 
-     #88279c;
+     font-size: 21px;
+     color: #63279c;
 }
 
 #content {
@@ -21,12 +20,18 @@ body {
 .box {
      background-color: rgba(145, 115, 189, 0.2);
      border-radius: 15px;
-     border: solid 2px;
+     border: solid 3px #4b007d;
+     box-shadow: 10px 10px 5px rgb(36, 23, 65, 50%);
 }
 
 h1 {
-     color: #711191;
+     color: #4b007d;
      font-family: FreeMono, monospace;
+     text-shadow: 2px 2px 8px rgb(94, 66, 126)
+}
+
+h2 {
+     color: #6a1aa1;
 }
 
 @media screen and (max-width: 600px) {

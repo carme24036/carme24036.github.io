@@ -22,6 +22,7 @@ let imgList = [
      'honor1.png',
      'honor2.png',
      'attendance.png',
+     'game.png',
 ];
 
 // add every listed image as a plane mesh with texture to scene
@@ -31,7 +32,7 @@ for (const image in imgList) {
      const geometry = new THREE.PlaneGeometry(20, 16);
      const material = new THREE.MeshBasicMaterial(
           {
-               color: 0xffffff,
+               color: 0xc7c7c7,
                side: THREE.DoubleSide,
                map: texture, // add the texture image here
           }
@@ -44,7 +45,7 @@ for (const image in imgList) {
 // Move the camera with the scroll bar
 function moveCamera() {
      const top = document.body.getBoundingClientRect().top;
-     camera.position.y = STARTY + top * 0.07;
+     camera.position.y = STARTY + top * 0.25;
      console.log(top);
 };
 
@@ -67,16 +68,17 @@ function resizeWindow() {
      // adjust for phone or desktop size
      if (window.innerWidth <= 600) {
           camera.position.x = 0
+          camera.position.y = STARTY + top * 0.01;
           for (const child in scene.children) {
                scene.children[child].rotation.y = 0;
-               scene.children[child].position.y = child * -40
+               scene.children[child].position.y = child * -42
           };
      }
      else { 
           camera.position.x = 25;
           for (const child in scene.children) {
                scene.children[child].rotation.y = 25 * (Math.PI / 180);
-               scene.children[child].position.y = child * -24
+               scene.children[child].position.y = child * -26
           };
      };
 };
