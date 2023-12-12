@@ -1,0 +1,35 @@
+body {
+     font-family: Verdana;
+     display: block;
+     background-color: rgb(194, 194, 194);
+}
+
+h1 {
+     text-align: center;
+}
+
+.game {
+     text-align: center;
+}
+
+#word-display {
+     font-size: 24px;
+     margin-bottom: 10px;
+}
+
+#letters-guessed {
+     margin-top: 10px;
+}
+
+.restart {
+     text-align: center;
+     background-color: rgb(65, 65, 65);
+     color: white;
+     padding: 8px;
+     border: 3px solid black;
+     border-radius: 8px;
+     cursor: pointer;
+     opacity: 0.6px;
+     font-size: 12px;
+     font-family: Verdana;
+}
