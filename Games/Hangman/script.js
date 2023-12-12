@@ -1,12 +1,11 @@
 // List of words for the game
 const words = [
-     "hangman", "developer", "programming",
-     "coffee", "pasta", "awesome",
-     "hippopotomonstrosesquippedaliophobia",
-     "awkward", "embezzle", "pneumonia", "fuchsia",
-     "abruptly", "bandwagon", "rhythm", "activity",
-     "technology", "pancake", "spaghetti", "khaki",
-     "quiz", "wave", "voodoo", "gossip"
+     "wave", "quiz", "pasta", "khaki", "voodoo", 
+     "coffee", "awesome", "rhythm", "hangman", "embezzle", 
+     "gossip", "abruptly", "fuchsia", "awkward",
+     "pancake", "activity", "developer", "bandwagon", 
+     "spaghetti", "pneumonia", "technology", "programming",
+     "hippopotomonstrosesquippedaliophobia"
 ];
 
 // Choose a random word
