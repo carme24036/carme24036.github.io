@@ -30,7 +30,7 @@ let imgList = [
 for (const image in imgList) {
 // every mesh has a geometry, texture, and material
      const texture = new THREE.TextureLoader().load('img/' + imgList[image])
-     const geometry = new THREE.PlaneGeometry(22, 17);
+     var geometry = new THREE.PlaneGeometry(22, 17);
      const material = new THREE.MeshBasicMaterial(
           {
                color: 0xc7c7c7,
@@ -47,7 +47,6 @@ for (const image in imgList) {
 function moveCamera() {
      const top = document.body.getBoundingClientRect().top;
      camera.position.y = STARTY + top * 0.25;
-     console.log(top);
 };
 
 document.body.onscroll = moveCamera;

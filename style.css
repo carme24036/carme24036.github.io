@@ -27,7 +27,8 @@ body {
 h1 {
      color: #4b007d;
      font-family: FreeMono, monospace;
-     text-shadow: 2px 2px 8px rgb(94, 66, 126)
+     text-shadow: 2px 2px 8px rgb(94, 66, 126);
+     font-size: 250%;
 }
 
 h2 {
