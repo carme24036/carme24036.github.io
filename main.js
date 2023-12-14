@@ -8,7 +8,7 @@ const scene = new THREE.Scene();
 
 // create and position the camera
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.z = 30;
+camera.position.z = 29;
 camera.position.y = STARTY;
 
 const bgTexture = new THREE.TextureLoader().load('/img/bg.png');
@@ -23,7 +23,7 @@ let imgList = [
      'honor2.png',
      'attendance.png',
      'game.png',
-     // 'robodog.png',
+     'robodog.png',
 ];
 
 // add every listed image as a plane mesh with texture to scene
@@ -46,7 +46,7 @@ for (const image in imgList) {
 // Move the camera with the scroll bar
 function moveCamera() {
      const top = document.body.getBoundingClientRect().top;
-     camera.position.y = STARTY + top * 0.25;
+     camera.position.y = STARTY + top * 0.18;
 };
 
 document.body.onscroll = moveCamera;
@@ -77,8 +77,8 @@ function resizeWindow() {
      else { 
           camera.position.x = 25;
           for (const child in scene.children) {
-               scene.children[child].rotation.y = 25 * (Math.PI / 180);
-               scene.children[child].position.y = child * -27
+               scene.children[child].rotation.y = 30 * (Math.PI / 180);
+               scene.children[child].position.y = child * -25
           };
      };
 };
