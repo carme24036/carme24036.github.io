@@ -1,3 +1,4 @@
+
 // List of words for the game
 const words = [
      "wave", "quiz", "pasta", "khaki", "voodoo", 
@@ -15,7 +16,7 @@ let selectedWord = words[Math.floor(Math.random() * words.length)];
 let guessedLetters = [];
 
 // Maximum attempts allowed
-const maxAttempts = 6;
+const maxAttempts = 7;
 
 // Initialize the game
 function initializeGame() {
@@ -23,6 +24,11 @@ function initializeGame() {
      updateWordDisplay();
      updateAttempts();
 }
+
+// Number of points
+let points = 0
+const pointsBox = document.getElementById("points")
+pointsBox.textContent = "Points: " + points
 
 // Update the displayed word with underscores for missing letters
 function updateWordDisplay() {
@@ -71,14 +77,23 @@ document.addEventListener("keydown", function (event) {
           updateAttempts();
 
           if (checkWin()) {
-               initializeGame();
+               // initializeGame();
                alert("Congratulations! You guessed the word: " + selectedWord);
-               location.reload()
+               points += 2;
+               // location.reload()
           } else if (checkLoss()) {
                initializeGame();
                alert("Sorry, you ran out of attempts. The correct word was: " + selectedWord);
                location.reload()
           }
+     }
+});
+
+document.addEventListener("keydown", function(event) {
+     // Check if the pressed key is Enter (key code 13)
+     if (event.key === "Enter") {
+       // Reload the page
+       location.reload();
      }
 });
 

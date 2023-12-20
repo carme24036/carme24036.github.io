@@ -1,0 +1,63 @@
+body {
+     margin: 0;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     background-image: linear-gradient(90deg, #c89eff, #df77ff);
+}
+
+#game-container {
+     position: relative;
+     width: 40%;
+     height: 60%;
+     background-color: #eec4ff;
+     /* Sky Blue */
+     border-radius: 10px;
+     overflow: hidden;
+     border: 3px solid rgb(146, 66, 221);
+     padding: 3%;
+     z-index: 1;
+}
+
+.bubble {
+     position: absolute;
+     width: 50px;
+     height: 50px;
+     /* Gold */
+     border-radius: 50%;
+     cursor: pointer;
+     transition: transform 0.2s ease-in-out;
+     padding: 1%;
+}
+
+#score {
+     text-align: center;
+     font-size: 24px;
+     font-family: 'Courier New', Courier, monospace;
+     font-weight: bolder;
+
+     padding: 1%;
+}
+
+#restart {
+     text-align: center;
+     font-size: 24px;
+     font-family: 'Courier New', Courier, monospace;
+     font-weight: bolder;
+     border: 2px solid rgb(216, 119, 255);
+     color: rgb(215, 108, 230);
+     background-color: rgb(244, 201, 255);
+     padding: 1%;
+     margin-bottom: 2%;
+     cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+     #game-container {
+          width: 90%;
+          height: 80%;
+     }
+     
+}

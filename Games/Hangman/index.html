@@ -9,15 +9,26 @@
 </head>
 
 <body>
-  
+
   <h1>Hangman</h1>
-  <div class="game">
+  <div class="game" style="margin: 2%;">
     <div id="word-display"></div>
     <div id="letters-guessed">Letters Guessed: </div>
     <p id="attempts">Attempts Left: <span id="attempts-left"></span></p>
+    <p id="points">Points: </p>
     <button class="restart" onclick=location.reload()>Restart Game</button>
+    <button class="help"
+      onclick='alert(
+        "-Click your keyboard to start guessing the word. \n" + 
+        "-When you run out of attempts, the game is over. \n" +
+        "-This game has words that are either very easy to guess, or very difficult to guess. \n" +
+        "-Good luck!"
+        )'>
+      How to play
+    </button>
+    <p style="color: rgb(182, 0, 0); font-size: 80%;">*There is a bug where the same word might appear twice</p>
   </div>
-  
+
   <script src="script.js"></script>
 </body>
 

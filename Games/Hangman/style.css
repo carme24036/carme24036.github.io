@@ -6,6 +6,8 @@ body {
 
 h1 {
      text-align: center;
+     font-size: 40px;
+
 }
 
 .game {
@@ -13,23 +15,45 @@ h1 {
 }
 
 #word-display {
-     font-size: 24px;
+     font-size: 30px;
      margin-bottom: 10px;
 }
 
 #letters-guessed {
      margin-top: 10px;
+     font-size: 20px;
+     color: rgb(116, 14, 14);
+}
+
+#attempts {
+     font-size: 15px;
+     color: rgb(65, 12, 150);
 }
 
 .restart {
      text-align: center;
      background-color: rgb(65, 65, 65);
      color: white;
-     padding: 8px;
+     padding: 10px;
      border: 3px solid black;
-     border-radius: 8px;
+     border-radius: 15px;
      cursor: pointer;
      opacity: 0.6px;
-     font-size: 12px;
+     font-size: 15px;
      font-family: Verdana;
+}
+
+.help {
+
+     text-align: center;
+     background-color: rgb(113, 86, 119);
+     color: white;
+     padding: 10px;
+     border: 3px solid rgb(55, 30, 61);
+     border-radius: 15px;
+     cursor: pointer;
+     opacity: 0.6px;
+     font-size: 15px;
+     font-family: Verdana;
+
 }

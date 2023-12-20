@@ -18,12 +18,13 @@ body {
 }
 
 .box {
-     background-color: rgba(145, 115, 189, 0.6);
-     border-radius: 15px;
+     background-color: rgba(147, 115, 189, 0.6);
+     border-radius: 20px;
      border: solid 3px #4b007d;
-     box-shadow: 10px 10px 5px rgb(36, 23, 65, 50%);
+     box-shadow: 10px 10px 5px rgb(36, 23, 65, 55%);
      padding-right: 1%;
      padding-left: 1%;
+     margin-right: 3%;
 }
 
 h1 {
