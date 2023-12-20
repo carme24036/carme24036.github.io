@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
      let score = 0;
      let bubblesPopped = 0;
+     let numBubblesFaded = 0
 
      function getRandomColor() {
           const letters = '0123456789ABCDEF';
@@ -33,6 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
           setTimeout(() => {
                fadeOutBubble(bubble);
           }, 500);
+
+          // make code for if 10 or more bubbles fade away before they are popped, the game is over
      }
 
      function fadeOutBubble(bubble) {
@@ -52,6 +55,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                }
           }, 20);
+               // numBubblesFaded++;
+               // console.log(numBubblesFaded);
+               // if (numBubblesFaded >= 10) {
+               //      alert("Game Over. You scored " + score + " points.");
+               //      // reload the page after clicking ok on the alert
+               //      location.reload();
+               // }
      }
 
      function popBubble(bubble) {
@@ -67,6 +77,8 @@ document.addEventListener('DOMContentLoaded', () => {
                createBubble();
           }, 500);
      }
+
+
 
      // create a fucntion that will create a div layer with a start button that will start the game when a button inside is clicked
      function createGameLayer() {
