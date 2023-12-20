@@ -86,7 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
           gameLayer.style.height = "100%";
           gameLayer.style.textAlign = "center";
 
-
           const startButton = document.createElement("button");
           startButton.textContent = "Start Game";
           startButton.style.padding = "1.5%";
@@ -94,17 +93,25 @@ document.addEventListener('DOMContentLoaded', () => {
           startButton.style.backgroundColor = "#f4c9ff";
           startButton.style.border = "2px solid #d86ce6";
           startButton.style.borderRadius = "8%";
-          startButton.style.marginTop = "22%";
           startButton.style.fontFamily = "monospace";
-          startButton.style.fontWeight = "Bolder";
+          startButton.style.fontWeight = "Bold";
           startButton.style.fontSize = "24px";
+
+          // make the startButton centered in the gameLayer using style 
+          startButton.style.position = "absolute";
+          startButton.style.top = "50%";
+          startButton.style.left = "50%";
+          startButton.style.transform = "translate(-50%, -50%)";
 
           startButton.addEventListener("click", startGame);
 
           gameLayer.appendChild(startButton);
           // add the gameLayer to the body
           document.body.appendChild(gameLayer);
+
      }
+
+
 
      createGameLayer();
 });

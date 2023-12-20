@@ -16,7 +16,9 @@ body {
      /* Sky Blue */
      border-radius: 10px;
      overflow: hidden;
-     border: 3px solid rgb(146, 66, 221);
+     /* make a gradient border */
+     border: 5px solid rgb(146, 66, 221);
+     box-shadow: 0 0 20px rgb(146, 66, 221);
      padding: 3%;
      z-index: 1;
 }
@@ -54,10 +56,11 @@ body {
      cursor: pointer;
 }
 
-@media screen and (max-width: 800px) {
+/* add mobile optimization */
+
+@media screen and (max-width: 764px) {
      #game-container {
           width: 90%;
-          height: 80%;
+          height: 60%;
      }
-     
 }
