@@ -3,8 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
      const scoreValue = document.getElementById('score-value');
 
      let score = 0;
+
      let bubblesPopped = 0;
-     let numBubblesFaded = 0
+     let bubbleInterval = 1000;
+     let bubbleGenerator = null;
+     let bubbleCounter = 0;
 
      function getRandomColor() {
           const letters = '0123456789ABCDEF';
@@ -29,13 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
           });
 
           gameContainer.appendChild(bubble);
+          bubbleCounter++;
+          checkGameOver();
 
           // Have the bubble to fade out after half a second
           setTimeout(() => {
                fadeOutBubble(bubble);
           }, 500);
-
-          // make code for if 10 or more bubbles fade away before they are popped, the game is over
      }
 
      function fadeOutBubble(bubble) {
@@ -47,35 +50,48 @@ document.addEventListener('DOMContentLoaded', () => {
                if (opacity <= 0) {
                     clearInterval(fadeOutInterval);
                     gameContainer.removeChild(bubble);
-
-                    bubblesPopped++;
-                    if (bubblesPopped >= 10) {
-                         // Adjust the timing or speed for the next set of bubbles
-                         bubblesPopped = 0;
-                    }
                }
           }, 20);
-               // numBubblesFaded++;
-               // console.log(numBubblesFaded);
-               // if (numBubblesFaded >= 10) {
-               //      alert("Game Over. You scored " + score + " points.");
-               //      // reload the page after clicking ok on the alert
-               //      location.reload();
-               // }
      }
 
      function popBubble(bubble) {
           bubble.style.transform = 'scale(0)';
           score++;
           scoreValue.textContent = score;
+
+          // Play pop sound
+          // var popSound = new Audio('pop.mp3'); 
+          // popSound.play();
+
+          bubblesPopped++;
+          if (bubblesPopped >= 10 && score >= 10) {
+               // increase the speed of bubbles for every 10 bubbles popped
+               bubbleInterval *= 0.9; // Decrease the interval by 50%
+               console.log(bubbleInterval);
+               bubblesPopped = 0;
+               bubbleCounter = 0;
+
+               clearInterval(bubbleGenerator);
+               bubbleGenerator = setInterval(createBubble, bubbleInterval);
+          }
+          setTimeout(checkGameOver, 0);
+     }
+
+     function checkGameOver() {
+          if (bubbleCounter - bubblesPopped > 10) {
+
+               // Stop the game
+               clearInterval(bubbleGenerator);
+
+               // Display game over message
+               alert('Game Over! You missed too many bubbles.');
+          }
      }
 
      function startGame() {
-          // remvoe the gameLyaer from the body
+          // remove the gameLayer from the body
           document.body.removeChild(document.getElementsByClassName("game-layer")[0]);
-          setInterval(() => {
-               createBubble();
-          }, 500);
+          bubbleGenerator = setInterval(createBubble, bubbleInterval);
      }
 
 
@@ -91,9 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
           gameLayer.style.top = "50%";
           gameLayer.style.left = "50%";
           gameLayer.style.transform = "translate(-50%, -50%)";
-          // give the gamLayer a css style with a background image of a gradient
           gameLayer.style.backgroundImage = "linear-gradient(90deg, #c89eff, #df77ff)";
-          // make the gameLayer css width and height 100% of the screen size
           gameLayer.style.width = "100%";
           gameLayer.style.height = "100%";
           gameLayer.style.textAlign = "center";
@@ -114,10 +128,27 @@ document.addEventListener('DOMContentLoaded', () => {
           startButton.style.top = "50%";
           startButton.style.left = "50%";
           startButton.style.transform = "translate(-50%, -50%)";
-
           startButton.addEventListener("click", startGame);
 
+          // add the startButton to the gameLayer
           gameLayer.appendChild(startButton);
+
+          // make a div layer with a heading that says "Bubble Pop Game" and a paragraph that says "Click the button to start the game
+          const gameTitle = document.createElement("h1");
+          gameTitle.textContent = "Bubble Pop Game";
+          gameTitle.style.color = "#f4c9ff";
+          gameTitle.style.fontFamily = "monospace";
+          gameTitle.style.fontWeight = "Bold";
+          gameTitle.style.fontSize = "48px";
+          gameTitle.style.marginTop = "0px";
+          gameTitle.style.marginBottom = "0px";
+          gameTitle.style.paddingTop = "2%";
+          gameTitle.style.paddingBottom = "2%";
+          gameTitle.style.borderBottom = "2px solid #8336ff";
+
+          // add the gameTitle to the gameLayer
+          gameLayer.appendChild(gameTitle);
+
           // add the gameLayer to the body
           document.body.appendChild(gameLayer);
 

@@ -75,7 +75,7 @@ function resizeWindow() {
           };
      }
      else { 
-          camera.position.x = 25;
+          camera.position.x = 22;
           for (const child in scene.children) {
                scene.children[child].rotation.y = 30 * (Math.PI / 180);
                scene.children[child].position.y = child * -25
