@@ -1,0 +1,3 @@
+The game is called "Love Bomb" and it is a cute arcade-style game designed with a girly aesthetic and inspired by valentines day, where you play as a pink circle trying to collect falling hearts while avoiding bombs. 
+
+You move left or right using the arrow keys. You have to catch 10 hearts to win the game, but if you accidentally touch a falling bomb, it's game over. The hearts and bombs fall from the top of the screen. 
