@@ -12,7 +12,9 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(400, 600);
+  // create canvas and attach it to the canvas-holder div so instructions can live outside the canvas
+  let cnv = createCanvas(400, 600);
+  cnv.parent('canvas-holder');
   player = createVector(width / 2, height - 50);
 // create hearts and bombs
   for (let i = 0; i < 5; i++) {
@@ -22,7 +24,8 @@ function setup() {
 }
 
 function draw() {
-  background(255, 192, 203); // pink background
+  // set canvas background to requested hex color
+  background('#ffc2e7ff');
 
   if (gameOver || gameWon) {
     textSize(32);
@@ -83,13 +86,17 @@ function draw() {
   textSize(40);
   textAlign(LEFT, TOP);
   text("Hearts: " + score, 10, 10);
+
+  // keep player on-screen
+  player.x = constrain(player.x, 25, width - 25);
 }
 
 // movement
 function keyPressed() {
-  if (keyCode === LEFT_ARROW) {
+  // Allow Arrow keys and A/D (both lower and upper case) to move the player
+  if (keyCode === LEFT_ARROW || (key && key.toLowerCase && key.toLowerCase() === 'a')) {
     player.x -= 20;
-  } else if (keyCode === RIGHT_ARROW) {
+  } else if (keyCode === RIGHT_ARROW || (key && key.toLowerCase && key.toLowerCase() === 'd')) {
     player.x += 20;
   }
 }
