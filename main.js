@@ -23,7 +23,6 @@ let imgList = [
      'honor2.png',
      'attendance.png',
      'game.png',
-     'robodog.png',
 ];
 
 // add every listed image as a plane mesh with texture to scene
