@@ -8,12 +8,32 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #ffa4c9;
+      background-color: #f19bd3;
     }
-    canvas {
-      margin: 0 auto;
+    /* layout for canvas and instructions */
+    .game-wrapper {
+      max-width: 800px;
+      margin: 20px auto;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    #canvas-holder canvas {
       display: block;
       border: 4px solid #ff69b4;
+      background: #ffa3da;
+    }
+    #instructions {
+      width: 260px;
+      background: #ffdbe7;
+      border: 2px solid #ffd1e6;
+      padding: 12px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      color: #3b3b3b;
+      font-family: sans-serif;
+      line-height: 1.3;
     }
     button {
     display: block;
@@ -35,6 +55,20 @@
 </head>
 <body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+  <div class="game-wrapper">
+    <div id="canvas-holder"></div>
+    <div id="instructions">
+      <h3 style="margin:0 0 8px 0;">How to play</h3>
+      <strong>Controls</strong>
+      <div>Left / Right arrow keys or A / D</div>
+      <br>
+      <strong>Rules</strong>
+      <div>Collect hearts to increase your score. Avoid bombs. Reach 10 hearts to win.</div>
+      <br>
+      <div style="font-size:12px;color:#555;">Press the Replay button to restart.</div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 
   <button onclick="location.reload()">Replay</button>
